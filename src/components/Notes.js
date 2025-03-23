@@ -151,7 +151,7 @@ export default function Notes(props) {
       </div>
       <div className="row my-5 px-3">
         <h1 className="mb-4" style={{ color:mode === "dark" ? "white" : "black" }}>Your Notes</h1> 
-          <div className="container position-relative">
+          <div className="container position-relative" style={{ color:mode === "dark" ? "white" : "black" }}>
         {notes.length===0 && "No Notes to display"}
         </div>
         {notes.map((note) => {
