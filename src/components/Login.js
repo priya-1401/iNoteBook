@@ -1,5 +1,5 @@
 import {React,useState} from "react";
-import {useNavigate} from 'react-router-dom'
+import {useNavigate,Link} from 'react-router-dom'
 const Login = (props) => {
     const [credentials,setcredentials]=useState({email:"",password:""})
     let navigate=useNavigate();
@@ -66,6 +66,11 @@ const Login = (props) => {
           Submit
         </button>
       </form>
+              <div className="mt-3">
+        <p style={{ color: props.mode === "dark" ? "white" : "black" }}>
+          Don't have an account? <Link to="/signup">Sign Up</Link>
+        </p>
+      </div>
     </div>
   );
 };
